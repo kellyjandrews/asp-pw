@@ -1,10 +1,16 @@
 {
+  "parserOptions" : {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
   "env": {
-      "node": true
+      "node": true,
+      "es6": true,
+      "jest": true
   },
   "extends": "eslint:recommended",
   "rules": {
-    "indent": ["error","tab"],
+    "indent": ["error", 2],
     "linebreak-style": ["error","unix"],
     "quotes": ["error","single"],
     "semi": ["error","always"]
