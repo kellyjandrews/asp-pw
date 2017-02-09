@@ -1,0 +1,25 @@
+{
+  "name": "asp-pw",
+  "version": "1.0.0",
+  "description": "A password hash and validation library in Node compatible with the ASP.NET identity framework.",
+  "main": "lib/asp-pw.js",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir lib --presets babel-preset-es2015 --ignore src/__tests/**"
+  },
+  "keywords": [
+    "asp",
+    "password",
+    "hash",
+    "identity"
+  ],
+  "author": "Kelly J Andrews",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.22.0",
+    "eslint": "^2.0.0-rc.1",
+    "jest": "^18.1.0"
+  }
+}
