@@ -12,16 +12,16 @@ ASP Password for Node
 ### Password Hashing
 
 ```javascript
-import password from '../asp-pw.js';
+import password from 'asp-pw';
 
 const hashedPassword = password.hash('MySecurePassword');
-console.log(hashedPassword); //  Prints "Base64 encoded string"
+console.log(hashedPassword); //  Prints Base64 encoded string
 ```
 
 ### Password Validation
 
 ```javascript
-import password from '../asp-pw.js';
+import password from 'asp-pw';
 
 // Get the original hash from your data provider.
 const hashedPassword = '...';
