@@ -20,12 +20,34 @@
   },
   "scripts": {
     "test": "jest --watchAll",
+    "lint": "eslint src/**.js",
     "test-once": "jest",
     "coverage": "jest --coverage",
     "deploy": "npm run clear-lib && npm run build-lib && npm run semantic-release",
     "build-lib": "babel src --out-dir lib --ignore src/__tests__/**",
     "clear-lib": "rm -rf lib",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "babel": {
+    "presets": ["es2015"]
+  },
+  "eslintConfig": {
+    "parserOptions" : {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": ["error", 2],
+      "linebreak-style": ["error","unix"],
+      "quotes": ["error","single"],
+      "semi": ["error","always"]
+      }
   },
   "devDependencies": {
     "@semantic-release/condition-codeship": "^1.1.0",

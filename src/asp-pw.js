@@ -9,7 +9,7 @@ function validate(pw, hashPw) {
   const testPw = hash(pw, hashSrc.salt);
   return testPw === hashPw;
 }
-
+;;
 function parseHash(hashPw) {
   const src = new Buffer(hashPw, 'base64');
   const v = Buffer.alloc(1);
